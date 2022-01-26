@@ -1,0 +1,5 @@
+
+//String  =('SHA-256: F9:4E:E1:03:77:6E:61:35:2D:EE:E3:FE:97:3B:74:6E:8C:B8:B0:C2:A0:01:EA:0B:B6:77:94:93:89:07:10:3E');
+
+String publicKey = ('c95ce8965c471b169043e399fe49e367');
+String privateKey = ('7f7924dc0a85287679226111cff29d5c5e19f504');
