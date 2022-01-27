@@ -66,11 +66,29 @@ class ApplicationViewModel extends ViewModel{
   //   var digest = md5.convert(content);
   //   return hex.encode(digest.bytes);
   // }
-  String generateMd5(String input) {
-    return md5.convert(utf8.encode(input)).toString();
-  }
+
+
+
+
+
+  // String generateMd5(String input) {
+  //   return md5.convert(utf8.encode(input)).toString();
+  // }
+  //
+
+
+
   // List<String> list = [];
   Future loadModels() async{
+    // var publickey = publicKey;
+    // var privatekey = privateKey;
+    // var stringToHash = {getTimestamp();
+    // var hash = md5({stringToHash});
+    // var baseUrl = 'https://gateway.marvel.com:443/v1/public/characters';
+    // var limit = 20;
+    // var url = baseUrl + '?limit=' + limit + '&ts=' + ts + '&apikey=' + publickey + '&hash=' + hash;
+
+
    // final url = buildUrl("");
     // List<String> list = [];
    // final timestamp = DateTime.now().microsecondsSinceEpoch;
@@ -85,11 +103,11 @@ class ApplicationViewModel extends ViewModel{
     // 'hash' => md5($now . $privateKey . $apikey)
     // ]
     // ]);
-
-      final hash = await generateMd5('${getTimestamp()}7f7924dc0a85287679226111cff29d5c5e19f504c95ce8965c471b169043e399fe49e367');
+     // NTA0NjYwNUU0RDMwQUU2RTA1QTBDQTBDOEI3OUM3RUQ4RTM0ODI2NA==
+      //final hash = await generateMd5('${getTimestamp()}7f7924dc0a85287679226111cff29d5c5e19f504c95ce8965c471b169043e399fe49e367');
      //var output = str.convert(utf8.encode(input)).toString();
       final response = await http.get(
-        Uri.parse('http://gateway.marvel.com/v1/public/characters?&ts=${getTimestamp()}apikey=c95ce8965c471b169043e399fe49e367&hash=$hash'),
+        Uri.parse('http://gateway.marvel.com/v1/public/characters?&ts=1&apikey=c95ce8965c471b169043e399fe49e367&hash=fd63f2e1839f0897df95c58c60a69e7d'),
         headers:<String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         }  );
@@ -100,8 +118,8 @@ class ApplicationViewModel extends ViewModel{
         // final ResponseCharacters characters =
         // ResponseCharacters.fromJson(jsonDecode);
 
-        // final List<Marvel> charactersList = body.data.results;
-       // return charactersList;
+       // final List<Marvel> charactersList = body.data.results;
+      // return charactersList;
       } else {
     throw Exception("Errore status code: ${response.body}");
     }
