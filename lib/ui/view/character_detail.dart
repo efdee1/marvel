@@ -59,7 +59,7 @@ class _CharacterDetailState extends State<CharacterDetail> {
                       right: 10,
                       child: IconButton(
                         onPressed: (){
-                          model.addUser(User(name: widget.character_detail_name,thumbnail:widget.character_detail_picture ));
+                          model.addUser(User(name: widget.character_detail_name,thumbnail:widget.character_detail_picture, ));
                           Navigator.push(
                             context,
                             MaterialPageRoute(

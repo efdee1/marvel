@@ -43,7 +43,7 @@ class _View extends StatelessView<ApplicationViewModel>{
                             return
                               MarvelHero(
                                   name:model.body!.data!.results![index].name,
-                                  picture:"https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80",
+                                  picture:"https://cdn.wallpapersafari.com/16/30/BCnsp7.jpg",
                                  description: model.body!.data!.results![index].description,
                               );
                           }
