@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marvel/constants/app_color.dart';
-import 'package:marvel/ui/view/characters.dart';
-import 'package:marvel/ui/view/favorite.dart';
 import 'package:marvel/view_model/application_view_model.dart';
 import 'package:pmvvm/mvvm_builder.widget.dart';
 import 'package:pmvvm/pmvvm.dart';
-
 import '../../locator.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -44,24 +41,14 @@ class _View extends StatelessView<ApplicationViewModel> {
           ],
         ),
       ),
-      body:
-      //index(model.selectedIndex)
-
-      Container(
+      body:Container(
         child:model.widgetOptions.elementAt(model.selectedIndex),
-        // IndexedStack(
-        //    index:model.selectedIndex,children: [
-        //   MarvelCharacters(),
-        //   Favorite()
-        // ],
-        // ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items:  const[
            BottomNavigationBarItem(
               icon: Icon(Icons.list),
             label: 'Characters'
-
           ),
 
 
